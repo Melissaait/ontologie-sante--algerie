@@ -1,0 +1,1879 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/"
+     xml:base="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:ONTOLOGIEFINAL="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL">
+        <rdfs:comment xml:lang="fr">Ontologie OWL modélisant le système de santé algérien,</rdfs:comment>
+        <rdfs:isDefinedBy>Melissa Ait Yahia et Lylia Moufouk</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Ontologie du Système de Santé Algérien</rdfs:label>
+        <rdfs:seeAlso>http://creativecommons.org/licenses/by/4.0/</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL#Appartient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL#Appartient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL#avoir"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL#avoir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL#avoir">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/aPourMédecin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/aPourMédecin">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/soigne"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/aPourTraitement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/aPourTraitement">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/traite"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/aÉtéÉtabliePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/aÉtéÉtabliePar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Établie"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ordonnance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/concerne -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/concerne">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/souffreDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/concerneRendezVous -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/concerneRendezVous">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/participeÀ"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/diagnostique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/diagnostique">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estDiagnostiquéePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/délivre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/délivre">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estDélivréPar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/effectue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/effectue">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estRéaliséePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/emploie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/emploie">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/travailleDans"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estDiagnostiquéePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estDiagnostiquéePar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estDélivréPar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estDélivréPar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estEffectuéeSur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estEffectuéeSur">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/subit"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estHospitaliséDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estHospitaliséDans">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/héberge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estPlanifiéPar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estPlanifiéPar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/planifie"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estPrescritPar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estPrescritPar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prescrit"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estRéaliséePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estRéaliséePar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/génèreRésultat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/génèreRésultat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/héberge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/héberge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/participeÀ -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/participeÀ">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/planifie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/planifie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prescrit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prescrit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/provientDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/provientDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/soigne -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/soigne">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/souffreDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/souffreDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/subit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/subit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/traite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/traite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/travailleDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/travailleDans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Établie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Établie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ordonnance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/adresse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/adresse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/adresseEtablissement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/adresseEtablissement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/agentPathogène -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/agentPathogène">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieInfectieuse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/capacitéLits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/capacitéLits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/codeICD10 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/codeICD10">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateAdmission -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateAdmission">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateCréation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateCréation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateRendezvous -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateRendezvous">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/durée -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/durée">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/duréeSéjour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/duréeSéjour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/forme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/forme">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/fréquenceCardiaque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/fréquenceCardiaque">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieCardiaque"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/heure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/heure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/heureRendezvous -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/heureRendezvous">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/idPro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/idPro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/interprétation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/interprétation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/modeTransmission -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/modeTransmission">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieInfectieuse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/motifConsultation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/motifConsultation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/niveauGravité -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/niveauGravité">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/nom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/nomCommercial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/nomCommercial">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/nomEtablissementSanté -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/nomEtablissementSanté">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/numAutorisation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/numAutorisation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/numDossier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/numDossier">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/numOrdonnance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/numOrdonnance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ordonnance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/pressionArtérielle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/pressionArtérielle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieCardiaque"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prix">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>DA</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/propriétaire -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/propriétaire">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prénom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prénom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/résultat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/résultat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Diagnostic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/sexe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/sexe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/statut -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/statut">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/symptômes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/symptômes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/typeEtablissement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/typeEtablissement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/typeProcédure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/typeProcédure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/valeur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/valeur">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/âge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/âge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/CabinetMédical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/CabinetMédical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Clinique"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Chirurgie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Chirurgie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Clinique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Clinique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Diagnostic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Diagnostic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierPatient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierPatient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ordonnance"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ExamenBiologique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ExamenBiologique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ExamenClinique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ExamenClinique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Imagerie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Imagerie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Infirmier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Infirmier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieCardiaque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieCardiaque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieGastro-Eritérale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieGastro-Eritérale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieInfectieuse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieInfectieuse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieNeurologique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieNeurologique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieSystemique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieSystemique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/diagnostique"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/prescrit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MédecinGénéraliste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MédecinGénéraliste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MédecinSpécialiste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MédecinSpécialiste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estDélivréPar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ordonnance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ordonnance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/aÉtéÉtabliePar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pathologie">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientAmbulant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientAmbulant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estHospitaliséDans"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estHospitaliséDans"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/délivre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProfessionnelSanté">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Personne"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/travailleDans"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/concerneRendezVous"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estPlanifiéPar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierMédical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/provientDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Examen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Thérapie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Thérapie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ProcédureMédicale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/estPrescritPar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/traitementPhysique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/traitementPhysique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Traitement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ÉtablissementSanté"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Alzheimer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Alzheimer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieNeurologique"/>
+        <codeICD10>G30</codeICD10>
+        <niveauGravité>Grave</niveauGravité>
+        <symptômes>Troubles de mémoire, désorientation</symptômes>
+        <rdfs:comment xml:lang="fr">Maladie neurodégénérative progressive&quot;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Appendicectomie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Appendicectomie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Chirurgie"/>
+        <durée rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</durée>
+        <typeProcédure>Ablation de l&apos;appendice</typeProcédure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/BilanVital -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/BilanVital">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ExamenClinique"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-08</date>
+        <résultat>Constantes normales</résultat>
+        <typeProcédure>Mesure des paramètres vitaux</typeProcédure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/CabinetDrKamel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/CabinetDrKamel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/CabinetMédical"/>
+        <adresseEtablissement>Résidence AADL, Bâtiment C, Bab Ezzouar, Alger</adresseEtablissement>
+        <nomEtablissementSanté>Cabinet Dr Kamel</nomEtablissementSanté>
+        <propriétaire>Dr. Kamel Bensalem</propriétaire>
+        <typeEtablissement>Privé</typeEtablissement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/CliniqueElAmel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/CliniqueElAmel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Clinique"/>
+        <adresseEtablissement>Chemin Mackley, Hydra, Alger</adresseEtablissement>
+        <nomEtablissementSanté>Clinique El Amel</nomEtablissementSanté>
+        <propriétaire>Groupe Santé El Ame</propriétaire>
+        <typeEtablissement>Privé</typeEtablissement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Consultation"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-08</date>
+        <heure>09:30</heure>
+        <motifConsultation>Douleur thoracique persistante</motifConsultation>
+        <résultat>Orientation vers cardiologue recommandée</résultat>
+        <type>Consultation de médecine générale</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DP001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DP001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/DossierPatient"/>
+        <ONTOLOGIEFINAL:Appartient rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient01"/>
+        <dateCréation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-10</dateCréation>
+        <numDossier>DM-001</numDossier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Dr_Ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Dr_Ali">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MédecinGénéraliste"/>
+        <soigne rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient02"/>
+        <travailleDans rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/HôpitalMustapha"/>
+        <email>dr.ali@chu-alger.dz&quot;</email>
+        <idPro>MG-001</idPro>
+        <nom>Ali</nom>
+        <prénom>Amine</prénom>
+        <sexe>Homme</sexe>
+        <âge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</âge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Dr_Hakim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Dr_Hakim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MédecinSpécialiste"/>
+        <soigne rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient01"/>
+        <travailleDans rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/HôpitalMustapha"/>
+        <email>dr.hakim@clinique-elamel.dz</email>
+        <idPro>MS-001</idPro>
+        <nom>Hakim</nom>
+        <prénom>Samir</prénom>
+        <sexe>Homme</sexe>
+        <âge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</âge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/HôpitalMustapha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/HôpitalMustapha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Hôpital"/>
+        <adresseEtablissement>Place du 1er Mai, Sidi M&apos;hamed, Alger-Centre</adresseEtablissement>
+        <capacitéLits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">850</capacitéLits>
+        <nomEtablissementSanté>CHU Mustapha Pacha</nomEtablissementSanté>
+        <typeEtablissement>Public universitaire</typeEtablissement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/IRM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/IRM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Imagerie"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-15</date>
+        <résultat>Anomalies corticales détectées</résultat>
+        <typeProcédure>IRM encéphalique avec injection de gadolinium</typeProcédure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Inf_Sara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Inf_Sara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Infirmier"/>
+        <travailleDans rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PharmacieElYasmine"/>
+        <idPro>INF-014</idPro>
+        <nom>Sara</nom>
+        <prénom>Lamia</prénom>
+        <sexe>Femme</sexe>
+        <âge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</âge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/InsuffisanceCardiaque -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/InsuffisanceCardiaque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieCardiaque"/>
+        <codeICD10>I50</codeICD10>
+        <fréquenceCardiaque rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</fréquenceCardiaque>
+        <niveauGravité>Grave</niveauGravité>
+        <pressionArtérielle>100/60 mmHg</pressionArtérielle>
+        <rdfs:comment xml:lang="fr">Défaillance du muscle cardiaque</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Kinésithérapie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Kinésithérapie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/traitementPhysique"/>
+        <durée rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</durée>
+        <typeProcédure>Kinésithérapie</typeProcédure>
+        <rdfs:comment xml:lang="fr">Programme de rééducation physique visant à restaurer la mobilité musculaire et articulaire après chirurgie ou blessure</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Lupus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Lupus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieSystemique"/>
+        <codeICD10>M32</codeICD10>
+        <niveauGravité>Grave</niveauGravité>
+        <symptômes>Fatigue, douleurs articulaires</symptômes>
+        <rdfs:comment xml:lang="fr">Maladie auto-immune systémique</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ord001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ord001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ordonnance"/>
+        <aÉtéÉtabliePar rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Dr_Hakim"/>
+        <dateCréation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-09</dateCréation>
+        <numOrdonnance>ORD-2025-001</numOrdonnance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Paludisme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Paludisme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieInfectieuse"/>
+        <agentPathogène>Plasmodium falciparum</agentPathogène>
+        <codeICD10>B50</codeICD10>
+        <modeTransmission>Vecteur (moustique)</modeTransmission>
+        <niveauGravité>Grave</niveauGravité>
+        <symptômes>Fièvre, frissons, anémie</symptômes>
+        <rdfs:comment xml:lang="fr">Infection parasitaire transmise par les moustiques</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Paracétamol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Paracétamol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médicament"/>
+        <dose>500 mg</dose>
+        <durée rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</durée>
+        <forme>Comprimé</forme>
+        <nomCommercial>Paracétamol</nomCommercial>
+        <prix rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</prix>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé"/>
+        <estHospitaliséDans rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/HôpitalMustapha"/>
+        <souffreDe rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Lupus"/>
+        <adresse>Alger, Bab Ezzouar</adresse>
+        <dateAdmission rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-20</dateAdmission>
+        <duréeSéjour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</duréeSéjour>
+        <nom>Saidi</nom>
+        <prénom>Nadia</prénom>
+        <sexe>Femme</sexe>
+        <âge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</âge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientAmbulant"/>
+        <souffreDe rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Alzheimer"/>
+        <adresse>Alger,Bab Ezzouar</adresse>
+        <nom>Djebar</nom>
+        <prénom>Nadia</prénom>
+        <sexe>Homme</sexe>
+        <âge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</âge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharm_Mohamed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharm_Mohamed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacien"/>
+        <délivre rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Paracétamol"/>
+        <idPro>PH-001</idPro>
+        <nom>Mohamed</nom>
+        <numAutorisation>PH-0025</numAutorisation>
+        <prénom>Karim</prénom>
+        <sexe>Homme</sexe>
+        <âge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</âge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PharmacieElYasmine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PharmacieElYasmine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Pharmacie"/>
+        <adresseEtablissement>Rue des Frères Bouadou, Bir Mourad Raïs, Alge</adresseEtablissement>
+        <nomEtablissementSanté>Pharmacie El Yasmine</nomEtablissementSanté>
+        <propriétaire>Dr. Mohamed Karim</propriétaire>
+        <typeEtablissement>Privé</typeEtablissement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Psychothérapie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Psychothérapie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Thérapie"/>
+        <durée rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</durée>
+        <typeProcédure>Thérapie cognitivo-comportementale (TCC</typeProcédure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RDV001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RDV001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+        <dateRendezvous rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-08</dateRendezvous>
+        <heureRendezvous>09:30</heureRendezvous>
+        <statut>Confirmé</statut>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Res001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Res001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RésultatExamen"/>
+        <provientDe rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/TestSanguin"/>
+        <dateCréation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-10</dateCréation>
+        <interprétation>Hyperglycémie légère - ajustement du traitement antidiabétique nécessaire</interprétation>
+        <valeur>Taux de glucose : 1.5 g/L (8.3 mmol/L)</valeur>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/TestSanguin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/TestSanguin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/ExamenBiologique"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-10</date>
+        <résultat>Hémoglobine basse</résultat>
+        <typeProcédure>Hémogramme complet (NFS)</typeProcédure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ulcère -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Ulcère">
+        <rdf:type rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/MaladieGastro-Eritérale"/>
+        <codeICD10>K25</codeICD10>
+        <niveauGravité>Modéré</niveauGravité>
+        <symptômes>Douleurs abdominales, nausées</symptômes>
+        <rdfs:comment xml:lang="fr">Lésion gastrique</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/mal">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Médecin"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Maladie"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/mal"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/soigne"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/soigne"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/diagnostique"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m1"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/mal"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/diagnostique"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m2"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/mal"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m1"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/m2"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/adresse"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                        <swrl:argument2>Alerte: Diagnostic confirmé par deux médecins différents</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Conflit de statut patient contradictoire</rdfs:comment>
+        <rdfs:label>s1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientAmbulant"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/PatientHospitalisé"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/symptômes"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                        <swrl:argument2>Conflit: Patient à la fois ambulant et hospitalisé</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Conflit de rendez-vous en double</rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/Patient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/RendezVous"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/participeÀ"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/participeÀ"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/p"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateRendezvous"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv1"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/d"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/dateRendezvous"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv2"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/d"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/heureRendezvous"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv1"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/h"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/heureRendezvous"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv2"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/h"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv1"/>
+                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv2"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/statut"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/melissa/ontologies/2025/11/ONTOLOGIEFINAL/rdv1"/>
+                        <swrl:argument2>Conflit: Rendez-vous en double</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
